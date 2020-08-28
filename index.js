@@ -2,11 +2,11 @@
 
 const express = require('express');
 const cors = require('cors');
-const { PORT } = require('./app/config');
+const { PORT, CORS } = require('./app/config');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({ origin: '*' }));
+app.use(cors({ origin: CORS }));
 
 app.use(_routes);
 
