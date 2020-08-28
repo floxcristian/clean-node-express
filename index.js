@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors({ origin: '*' }));
 
-app.use(_routes); // como usar rutas separadas en distintos modulos?
+app.use(_routes);
 
 //const server = app.listen(3000);
 
