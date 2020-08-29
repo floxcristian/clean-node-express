@@ -6,6 +6,27 @@
 ### Project anatomy
 
 ```
+.
+├── app.js
+├── bin
+│   └── www
+├── package.json
+├── components
+│   ├── images
+│   ├── javascripts
+│   └── stylesheets
+│       └── style.css
+├── routes
+│   ├── index.js
+│   └── users.js
+└── views
+    ├── error.pug
+    ├── index.pug
+    └── layout.pug
+
+```
+
+```
 app
  └ lib                              → Application sources
     └ application                   → Application services layer
