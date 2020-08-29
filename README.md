@@ -1,5 +1,7 @@
 # A basic Express.js API following Clean Architecture principles
 
+- Arquitectura basada en componentes.
+
 ### Project anatomy
 
 ```
