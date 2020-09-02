@@ -1,8 +1,30 @@
 # A basic Express.js API following Clean Architecture principles
 
 - Arquitectura basada en componentes.
+- Cada componente tiene múltiples capas.
 
 ### Project anatomy
+
+```
+.
+├── app.js
+├── bin
+│   └── www
+├── package.json
+├── components
+│   ├── images
+│   ├── javascripts
+│   └── stylesheets
+│       └── style.css
+├── routes
+│   ├── index.js
+│   └── users.js
+└── views
+    ├── error.pug
+    ├── index.pug
+    └── layout.pug
+
+```
 
 ```
 app
