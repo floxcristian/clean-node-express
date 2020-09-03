@@ -4,7 +4,7 @@
 - Cada componente tiene múltiples capas.
 - Arquitectura basada en **Clean Architecture** y **Arquitectura Hexagonal**.
 - Capas separadas para gestionar las peticiones del API y las consultas a la base de datos.
-- Favilita el testeo.
+- Facilita la creación de test unitarios.
 
 ### Project anatomy
 
