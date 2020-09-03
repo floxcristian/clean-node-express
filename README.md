@@ -1,7 +1,7 @@
 # A basic Express.js API following Clean Architecture principles
 
 - Arquitectura basada en componentes.
-- Cada componente tiene múltiples capas.
+- Cada componente posee múltiples capas.
 
 ### Project anatomy
 
@@ -52,3 +52,7 @@ app
  └ test                             → Source folder for unit or functional tests
  └ index.js                         → Main application entry point
 ```
+
+# Referencias
+
+https://github.com/goldbergyoni/nodebestpractices/
