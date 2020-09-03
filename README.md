@@ -2,6 +2,7 @@
 
 - Arquitectura basada en componentes.
 - Cada componente tiene múltiples capas.
+- Arquitectura basada en **Clean Architecture** y **Arquitectura Hexagonal**.
 
 ### Project anatomy
 
