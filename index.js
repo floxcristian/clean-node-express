@@ -2,7 +2,7 @@
 
 const express = require('express');
 const cors = require('cors');
-//const routes =
+// const routes =
 const { PORT, CORS } = require('./app/config');
 
 const app = express();
@@ -13,7 +13,7 @@ app.use(cors({ origin: CORS }));
 
 app.use(routes);
 
-//const server = app.listen(3000);
+// const server = app.listen(3000);
 
 app.listen(PORT, () => {
   console.log(`Listening on PORT: ${PORT}`);
