@@ -1,0 +1,11 @@
+{
+  "extends": ["prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    // Aca puedes modificar alguna regla específica, por ejemplo:
+    // "@typescript-eslint/explicit-function-return-type": "off",
+  }
+}

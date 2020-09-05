@@ -4,11 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "lint": "",
+    "format:write": "prettier {src,e2e,cypress}/**/*.{ts,json,md,scss} --write",
+    "format:test": "prettier {src,e2e,cypress}/**/*.{ts,json,md,scss} --list-different"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "keywords": [],
-  "author": "",
+  "author": "cristianfloresee",
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -21,6 +28,11 @@
     "pg": "^8.3.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.11.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.3.0",
+    "nodemon": "^2.0.4",
+    "prettier": "2.1.1"
   }
 }
