@@ -3,7 +3,7 @@ const pool = require('../database');
 const getUsers = async (props) => {
   const { role, status, pageSize, page } = props;
   const from = (page - 1) * pageSize;
-  /*const text = `
+  /* const text = `
             SELECT u.id_user, u.name, u.last_name, u.middle_name, u.document, u.email, u.phone, u.username, u.active, u.profile_image, u.created_at, u.updated_at, r.roles
             FROM users AS u 
             INNER JOIN (
@@ -17,7 +17,7 @@ const getUsers = async (props) => {
             WHERE ($2::bool IS NULL OR u.active = $2)
             ORDER BY id_user 
             LIMIT $3 
-            OFFSET $4`;*/
+            OFFSET $4`; */
   const values = [role, status, pageSize, from];
   return (await pool.query(text, values)).rows;
 };
