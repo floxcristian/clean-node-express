@@ -7,14 +7,15 @@
     "start": "nodemon index.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "lint:watch": "eslint --watch",
     "db:setup": "node dbSetup.babel.js",
     "format:write": "prettier **/*.{js, json, md} --write",
     "format:test": "prettier {src,e2e,cypress}/**/*.{js,json,md} --list-different",
-    "snyk-protect": "snyk protect",
+    "snyk:protect": "snyk protect",
     "typings": "typings install",
     "prepublish": "npm run snyk-protect",
-    "prepare": "npm run snyk-protect"
+    "prepare": "npm run snyk-protect",
+    "dependencies:check": "npx npm-check --skip-unused --update"
+
   },
   "husky": {
     "hooks": {
@@ -25,6 +26,10 @@
     "*.js": [
       "eslint --cache --fix",
       "git add"
+    ],
+    "*.{js|json|md}": [
+      "prettier --write",
+      "git add"
     ]
   },
   "keywords": [
@@ -32,10 +37,11 @@
     "node",
     "express",
     "boilerplate",
-    "es6"
+    "es6",
+    "rest"
   ],
   "author": "Cristian Flores <cristianflores.ee@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "chalk": "^4.1.0",
