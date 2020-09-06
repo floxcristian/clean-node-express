@@ -1,5 +1,3 @@
-'use strict';
-
 const getUsers = async (req, res, next) => {
   const {} = req.body;
   try {
@@ -7,7 +5,10 @@ const getUsers = async (req, res, next) => {
     if (users) {
       return res.status(200).json({});
     }
-  } catch (err) {}
+    return;
+  } catch (err) {
+    next(err);
+  }
 };
 
 const createUser = async (req, res, next) => {
@@ -16,7 +17,9 @@ const createUser = async (req, res, next) => {
 
     const user = await createUser();
     return res.status(201).json();
-  } catch (err) {}
+  } catch (err) {
+    next(err);
+  }
 };
 
 module.exports = {

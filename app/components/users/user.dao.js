@@ -1,5 +1,3 @@
-'use strict';
-
 const pool = require('../database');
 
 const getUsers = async (props) => {

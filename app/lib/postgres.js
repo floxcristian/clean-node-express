@@ -1,11 +1,9 @@
-'use strict';
+const { Pool } = require('pg');
 
-const Pool = require('pg').Pool;
-
-const pool = new Pool(_config_db);
+const pool = new Pool(config_db);
 
 (async () => {
-  const { port, host, database } = _config_db;
+  const { port, host, database } = config_db;
 
   try {
     const text = `

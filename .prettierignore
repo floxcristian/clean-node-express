@@ -2,10 +2,6 @@
 build
 coverage
 node_modules
-**/node_modules/**
-
-# Ignore all HTML files:
-*.html
 
 # Other
 package-lock.json

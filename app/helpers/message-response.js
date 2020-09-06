@@ -1,5 +1,3 @@
-'use strict';
-
 export class MessageResponse {
   static messageFormat(customMesssage) {
     return `${customMesssage}`;
