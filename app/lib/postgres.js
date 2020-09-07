@@ -1,9 +1,10 @@
 const { Pool } = require('pg');
+const config = require('../config');
 
-const pool = new Pool(configDb);
+const pool = new Pool(config.pg);
 
 (async () => {
-  const { port, host, database } = configDb;
+  const { port, host, database } = config.pg;
 
   try {
     const text = `
