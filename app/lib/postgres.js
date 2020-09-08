@@ -1,6 +1,8 @@
 const { Pool } = require('pg');
 const config = require('../config');
 
+let postgres = null;
+
 const pool = new Pool(config.pg);
 
 (async () => {
@@ -24,4 +26,9 @@ const pool = new Pool(config.pg);
 module.exports = {
   query: (text, params) => pool.query(text, params),
   pool
+};
+
+module.exports = (config) => {
+  if (!posgres) postgres = new Pool(config);
+  return postgres;
 };
